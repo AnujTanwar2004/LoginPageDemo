@@ -80,6 +80,52 @@ body {
   color: var(--ink-soft);
 }
 
+.hero-email {
+  margin: 0.5rem 0 1rem;
+  color: var(--mint);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.cta-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.8rem;
+  flex-wrap: wrap;
+}
+
+.primary-btn {
+  background: linear-gradient(120deg, #67d8c2, #4fc4a8);
+  color: white;
+  border: 0;
+  border-radius: 12px;
+  padding: 0.95rem 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 160ms ease, filter 160ms ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.secondary-btn {
+  background: rgba(22, 33, 59, 0.1);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.95rem 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.secondary-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(22, 33, 59, 0.15);
+}
+
 .feature-grid {
   display: grid;
   gap: 1rem;
