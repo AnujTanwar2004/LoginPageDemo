@@ -1,0 +1,146 @@
+:root {
+  --ink: #16213b;
+  --ink-soft: #415170;
+  --sun: #f2994a;
+  --mint: #67d8c2;
+  --paper: #f5f7fb;
+  --card: rgba(255, 255, 255, 0.72);
+  --line: rgba(22, 33, 59, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Manrope', sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 8% 15%, rgba(242, 153, 74, 0.26), transparent 30%),
+    radial-gradient(circle at 82% 8%, rgba(103, 216, 194, 0.24), transparent 34%),
+    linear-gradient(140deg, #e8eff8 0%, #f3f6fb 55%, #e2ecfb 100%);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem clamp(1rem, 4vw, 3rem);
+}
+
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.ghost-btn {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.hero-wrap {
+  width: min(1100px, 92%);
+  margin: 1.2rem auto 3rem;
+}
+
+.hero-card {
+  border: 1px solid var(--line);
+  background: var(--card);
+  backdrop-filter: blur(4px);
+  border-radius: 26px;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  box-shadow: 0 25px 45px rgba(42, 63, 105, 0.12);
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+}
+
+.hero-card h1 {
+  margin: 0.5rem 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.08;
+}
+
+.hero-sub {
+  margin: 0;
+  max-width: 60ch;
+  color: var(--ink-soft);
+}
+
+.feature-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.2rem;
+}
+
+.feature {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.feature h3 {
+  margin-top: 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.feature p {
+  margin-bottom: 0;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.reveal,
+.reveal-delay-1,
+.reveal-delay-2,
+.reveal-delay-3 {
+  animation: floatIn 600ms ease both;
+}
+
+.reveal-delay-1 {
+  animation-delay: 70ms;
+}
+
+.reveal-delay-2 {
+  animation-delay: 150ms;
+}
+
+.reveal-delay-3 {
+  animation-delay: 230ms;
+}
+
+@media (max-width: 900px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    padding: 0.8rem 1rem;
+  }
+}
+
+@keyframes floatIn {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
